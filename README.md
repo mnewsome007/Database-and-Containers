@@ -26,24 +26,27 @@ Through this project, you will be able to manage a database and visualize its da
 - <b>AWS Management Console</b>
 - <b>Docker</b>
 - <b>AWS Management Console</b>
+- <b>Metabase</b>
 
 <h2>Database and Containers walk-through:</h2>
 
-- <b>Purchase a domain from AWS through Route 53 in the AWS Management Console</b>
-- <b>Purchasing your domain through AWS automatically creates a hosted zone (container for your records)</b>
-- <b>Within Amazon S3, create your main S3 bucket which will be named after your main URL domain; you will also choose your AWS region during this process</b>
-- <b>You will now UPLOAD your own files to the S3 bucket </b>
-- <b>Activate Static website hosting under the Static website hosting section in the Properties tab</b>
-- <b>Verify the website by using the temporary URL of the S3 bucket</b>
-- <b>Within Amazon S3, create a redirect S3 bucket, following the same process used to create the main S3 bucket. You will choose Redirect for the Hosting type and set Protocol to "None". The "Host name" should be filled with the target bucket website address(main S3 bucket domain); this redirects all traffic it recieves to the main S3 bucket previously created</b>
-- <b>Now you will link the domain to the main S3 bucket using Route 53 by creating "A" DNS records inside your hosted zone </b>
-- <b>You will follow the recent step to create the second DNS record for the redirect S3 bucket</b>
-- <b>Create a SSL certificate for your website through AWS Certificate Manager, after the creation of the SSL certificate, validate the certificate</b>
-- <b>CloudFront will no be introduced in order to deploy your website in HTTPS and allow faster access to the website for users</b>
-- <b>Create the main CLoudFront distribution using the main S3 bucket URL</b>
-- <b>Create the redirect CLoudFront distribution using the Origin domain for the URL of the S3 bucketL</b>
-- <b>In your redirect S3 bucket, you can now change the protocol to "https"</b>
-- <b>Finalize the A records in Route 53 so the web addresses route traffic created by CloudFront distributions</b>
+- <b>Create a VPC within the AWS Management Console and use "VPC,subnets,etc."</b>
+- <b>Choose 2 Availablity Zones and 2 public subnets</b>
+- <b>Create a RDS MySQL database within Amazon RDS</b>
+- <b>Within Amazon EC2 create a ECS Cluster in a EC2 instance</b>
+- <b>Check the resources available for the creation of the container</b>
+- <b>Create a Task definition which contains the image used, the size of the container, the enviroment variables etc. in order to create the container</b>
+- <b>"Add container" to the Task Definition/b>
+- <b>Import an image from Docker Hub and install it into the container</b>
+- <b>Create limits for each image so they do not sabotage each other</b>
+- <b>Select EC2 Launch type and select the prevoisuly created Task Definition to run the task</b>
+- <b>Connect the EC2 instance containing the ECS Cluster using its IP address</b>
+- <b>Create a Task Definition for Metabase</b>
+- <b>Configure the Metabase</b>
+- <b>Add the EFS file system to the Metabase container</b>
+- <b>Create your database struture with multiple tables;use SQL query to create these tables</b>
+- <b>Add your data to each table</b>
+- <b>Add the newly created database to Metabase in order to create a dashboard to view the statistcis of your added database</b>
 
 
 
