@@ -1,29 +1,33 @@
-<h1>Static Website Hosting</h1>
+<h1>Database and Containers</h1>
 
 
 <h2>Description</h2>
-This project will guide you in hosting a static website on AWS. You will learn the steps of importing a domain name on AWS, creating a hosted zone and managing its DNS records, creating S3 buckets to host website pages, configuring Route 53 to link the domain name to the website, creating an SSL certificate for the website using AWS Certificate Manager (ACM), and creating CloudFront distributions to secure the website in HTTPS. By completing this project, you will have a comprehensive understanding of how to host a static website on AWS and the various tools and technologies involved in the process.
+Through this project, you will be able to manage a database and visualize its data with tools installed inside containers.
 <br />
 
 <h2>AWS Cloud Map</h2>
 <p align="center">
-<img src="https://i.imgur.com/MleqjqT.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/xXY2o9H.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 
 
 <h2>Services Used</h2>
 
-- <b>Route 53</b> 
-- <b>CloudFront</b>
-- <b>AWS Certificate Manager</b>
-- <b>Amazon S3</b>
+- <b>VPC & Subnets</b> 
+- <b>Amazon RDS</b>
+- <b>Amazon EC2</b>
+- <b>Amazon EBS</b>
+- <b>Amazon ECS</b>
+- <b>Amazon EFS</b>
 
 <h2>Environments Used </h2>
 
 - <b>AWS Management Console</b>
+- <b>Docker</b>
+- <b>AWS Management Console</b>
 
-<h2>Static Website Hosting walk-through:</h2>
+<h2>Database and Containers walk-through:</h2>
 
 - <b>Purchase a domain from AWS through Route 53 in the AWS Management Console</b>
 - <b>Purchasing your domain through AWS automatically creates a hosted zone (container for your records)</b>
